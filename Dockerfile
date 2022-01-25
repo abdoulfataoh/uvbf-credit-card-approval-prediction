@@ -18,15 +18,7 @@ RUN apt-get update
 # install python requiements packages
 RUN pip install -r requirements.txt
 
-# launch model switching script
-RUN chmod 777 switch-model.sh && ./switch-model.sh
+# launch script
+RUN chmod 777 launch.sh
 
-# run dvc repro
-RUN dvc repro
-
-# launch script to get gdrive folder id
-RUN chmod 777 gdrive-folder-id.sh && ./gdrive-folder-id.sh
-
-# push data to gdrive
-CMD [ "dvc", "push"]
 

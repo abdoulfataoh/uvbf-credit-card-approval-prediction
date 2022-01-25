@@ -15,6 +15,10 @@ case $REPLY in
 esac
 
 # google drive info
-echo "enter google drive id for data backup: "
+echo -n "enter google drive id for data backup: "
 read
 dvc remote modify gdrive url gdrive://$REPLY
+
+# launch 
+dvc repro
+dvc push
