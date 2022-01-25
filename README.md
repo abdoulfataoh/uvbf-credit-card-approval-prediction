@@ -19,17 +19,16 @@ Dans ce depot, nous utilisons l'appentissage machine pour proposer deux modeles 
   <img width="180" src="https://drive.google.com/uc?export=download&id=1u29V3rylBuTiRfg8rMvXiHXmv05vp1xF">
 </p>
 
-### Reproduction
 
-#### clonage du projet
+### clonage du projet
 - ```git clone https://github.com/abdoulfataoh/uvbf-credit-card-approval-prediction.git```
 - ```cd uvbf-credit-card-approval-prediction```
-
+### 1. Reproduction sur un virtualenv
 #### Installation installation pipenv
 - ```sudo apt-get install pipenv```
 - ou ```pip install pipenv```
 
-### Specifier la version de python
+#### Specifier la version de python
 - ```vim Pipefile```
 - remplacer la version python de cette ligne ```python_version = "3.9"``` par la version equivalente
 #### Installation des dependances
@@ -47,5 +46,11 @@ Dans ce depot, nous utilisons l'appentissage machine pour proposer deux modeles 
 #### Repro
 - ```dvc repro```
 
-### Pousser les dataset versionné vers le dossier google drive
+#### Pousser les dataset versionné vers le dossier google drive
 - ```dvc push```
+
+### 1. Reproduction sur un conteneur docker.
+Tous les etapes cités dans la parie numero 1 sont automatiser par le script ```launch.sh``` dans une image docker. Apres avoir cloner le repo puis deplacer veuillez:
+
+- ```docker build -t train-env .``` pour construire une image avec toutes les depances et le code source.
+- ```docker run -it  train-env /app/launch.sh``` et suivre les instructions
