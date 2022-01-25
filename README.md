@@ -49,7 +49,7 @@ Dans ce depot, nous utilisons l'appentissage machine pour proposer deux modeles 
 #### Pousser les dataset versionné vers le dossier google drive
 - ```dvc push```
 
-### 1. Reproduction sur un conteneur docker.
+### 2. Reproduction sur un conteneur docker.
 Tous les etapes cités dans la parie numero 1 sont automatiser par le script ```launch.sh``` dans une image docker. Apres avoir cloner le repo puis deplacer veuillez:
 
 - ```docker build -t train-env .``` pour construire une image avec toutes les depances et le code source.
