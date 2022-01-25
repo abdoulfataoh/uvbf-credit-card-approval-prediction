@@ -1,5 +1,5 @@
 #!/bin/bash
-# script to auto swtich in git tag
+# swtich in git tag
 echo "choose model for training (1/2):"
 echo "enter 1 for logistic-regression"
 echo "enter 2 for random-forest "
@@ -13,3 +13,8 @@ case $REPLY in
    git checkout random-forest-experiment ;;
 *) echo "exited"; exit
 esac
+
+# google drive info
+echo "enter google drive id for data backup: "
+read
+dvc remote modify gdrive url gdrive://$REPLY
