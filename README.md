@@ -42,8 +42,8 @@ Dans ce depot, nous utilisons l'appentissage machine pour proposer deux modeles 
 - ```dvc remote modify  gdrive url gdrive://<google drive folder id>```
 
 #### Switcher sur le modele preferé
-- ```git checkout -b logistic-regression pour la regression logistic```
-- ```git checkout -b random-forest pour RandomForestClassifier```
+- ```git checkout logistic-regression-experiment pour la regression logistic```
+- ```git checkout random-forest-experiment pour RandomForestClassifier```
 #### Repro
 - ```dvc repro```
 
