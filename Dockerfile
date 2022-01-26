@@ -18,7 +18,7 @@ RUN apt-get update
 # install python requiements packages
 RUN pip install -r requirements.txt
 
-# launch script
+# add posix privileges on launch.sh
 RUN chmod 777 launch.sh
 
 
